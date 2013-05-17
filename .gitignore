@@ -1,0 +1,11 @@
+Debug/
+Release/
+*.user
+*.swp
+*.pdb
+*.ncb
+*.suo
+*.exp
+*.lib
+*.pyd
+
