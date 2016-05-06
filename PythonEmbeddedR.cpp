@@ -34,7 +34,9 @@ extern "C" {
                 pyRes = Py_BuildValue("s", CHAR(STRING_ELT(rRes,0)));
             } else if(isReal(rRes)) {
                 pyRes = PyTuple_New(length(rRes));
-                for(Py_ssize_t rl=0; rl<length(rRes); ++rl) PyTuple_SetItem(pyRes, rl, PyFloat_FromDouble(REAL(rRes)[i]));
+                for(Py_ssize_t rl=0; rl<length(rRes); ++rl) {
+                    PyTuple_SetItem(pyRes, rl, PyFloat_FromDouble(REAL(rRes)[rl]));
+                }
             } else {
                 pyRes = Py_BuildValue("s", "Cannot handle return type");
                 Py_INCREF(pyRes);

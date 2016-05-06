@@ -18,3 +18,10 @@ The function defined here evaluates an arbitrary set of R expressions, and will 
 On windows, you can just use the solution provided, after modifying the include and library paths (via project->properties) to suite your environment.
 
 If your using GCC or any other compiler, then you can probably figure it out yourself (... and I mean that respectfully), though if you need a hand, please ask and I will document it.
+
+## Notes
+
+You will need to have:
+
+- The environment variable R_HOME set.
+- The R shared library on the path.
